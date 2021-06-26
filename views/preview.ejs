@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+    
+<% empresas.forEach(empresas=> { %>
+
+    <div class="my-4 container">
+        <h5>Listel - Perfil nº <%= empresas.id %></h5>
+    </div>
+    <div class="container ">
+    <div class="form-inline py-1 justify-content-around border">
+        <img src="/img/pessoa.png" alt="" style="width: 7%; border-radius: 50%; border: purple 2px solid;" >
+        <div class="col-3">
+            <h5><%= empresas.razaoSocial %></h5>
+            <p><i class="fas fa-phone"></i>  <%= empresas.telefone %></p>
+            <p><i class="fab fa-whatsapp"></i>  <%= empresas.whatsapp %></p>
+            <p id="tag"><%= empresas.tags %></p>
+        </div>
+        <div class="col-3 ">
+            <h5>Mídias</h5>
+            <p><i class="fab fa-instagram"></i> <%= empresas.instagram %></p>
+            <p><i class="fab fa-facebook"></i> <%= empresas.facebook %></p>
+            <p><i class="fab fa-twitter"></i> <%= empresas.twitter %></p>
+            <p><i class="fab fa-youtube"></i> <%= empresas.youtube %></p>
+        </div>
+        <div class="col-3">
+            <h5>Endereço</h5>
+            <p><%= empresas.rua %>, <%= empresas.numero %></p>
+            <p><%= empresas.bairro %></p>
+            <p><%= empresas.cidade %> - <%= empresas.estado %></p>
+            <p><%= empresas.cep %></p>
+        </div>
+
+    </div>
+</div>
+<% }); %>
+
+<div class="container">
+    <div class="my-4">
+        <h5>Feedback</h5>
+        <hr>
+    </div>
+    <div>
+        <h6>Críticas, Sugestões e Observações:</h6>
+        <textarea name="comentario" id="" cols="155" rows="5" placeholder=" Conta pra gente!"></textarea>
+    </div>
+    <hr>
+    <div  class="d-flex justify-content-between">
+        <button class="btn btn-secondary">Voltar</button>
+        <button class="btn btn-success"> Salvar</button>
+    </div>
+    <hr>
+</div>
+<div class="container">
+    <h5>Depoimentos</h5>
+    <hr>
+</div>
+
+<%- include('./partials/footer.ejs') %>

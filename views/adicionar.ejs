@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+<div class="container">
+    <div class="py-4">
+        <h5>Listel | Nova empresa</h5></div>
+        <form action="/salvar" method="POST">
+            <div class="align-items-center border p-3">
+                <h6>Dados Gerais</h6>
+                <hr>
+                <div class="form-row">
+                    <div class="form-group col-3">
+                        <label for="inputname">Razão Social</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputname" 
+                            placeholder="Zé Silva ME"
+                            name="razaoSocial">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputIM">Inscrição Municipal</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputIM" 
+                            placeholder="123.456.789"
+                            name="IscMunicipal">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputCNPJ">CNPJ ou CPF</label>
+                        <input
+                            type="text" 
+                            class="form-control" 
+                            id="inputCNPJ"
+                            placeholder="23.456.789/0111-33" 
+                            name="cnpj">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputIE">IE ou RG</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputIE"
+                            placeholder="55.555.55" 
+                            name="inscEstadual">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputname">Nome Fantasia</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputname" 
+                            placeholder="Zé Padaria e cervejas"
+                            name="nomeFantasia">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputResp">Responsável</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputResp" 
+                            placeholder="José da Silva"
+                            name="nomeResponsavel">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputTel">Tel Fixo/Celular</label>
+                        <input 
+                            type="tel" 
+                            class="form-control" 
+                            id="inputTel"
+                            placeholder="47996756385" 
+                            name="telefone">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputEmail">E-mail</label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="inputEmail"
+                            placeholder="eu@voce.com" 
+                            name="email">
+                    </div>
+                </div>
+            </div>
+            <div class="align-items-center border p-3 my-2">
+                <h6>Endereço</h6>
+                <hr>
+                <div class="form-row">
+                    <div class="form-group col-3">
+                        <label for="Rua">Rua</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="rua" 
+                            placeholder="Rua Dona Francisca"
+                            name="rua">
+                    </div>
+                    <div class="form-group col-3">
+                        <label >Número</label>
+                        <input 
+                            type="number" 
+                            class="form-control" 
+                            id="num" 
+                            placeholder="123"
+                            name="numero">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="compl">Complemento</label>
+                        <input 
+                            type="text" 
+                            class="form-control" id="compl"
+                            placeholder="Casa dos fundos" 
+                            name="complemento">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputbairro">Bairro</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputbairro"
+                            placeholder="Centro" 
+                            name="bairro">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputcidade">Cidade</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputname" 
+                            placeholder="Chuville"
+                            name="cidade">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputEstado">Estado</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputEstado" 
+                            placeholder="SP"
+                            name="estado">
+                    </div>
+                    <div class="form-group col-3">
+                        <label for="inputCEP">CEP</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="inputCEP"
+                            placeholder="89202100" 
+                            name="cep">
+                    </div>
+                </div>
+                <div class="border p-3 my-2">
+                    <h6>Endereço</h6>
+                    <hr>
+                    <div class="form-inline justify-content-around">
+                        <img src="img/image.png" alt="" style="border-radius: 50%; width: 15%;">
+                        <div class="col-3">
+                            <div class="form-group col-4">
+                                <label for="inputURL">URL</label>
+                                <input 
+                                    type="url" 
+                                    class="form-control" 
+                                    id="inputURL" 
+                                    placeholder="https://exemple.com"
+                                    name="url">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="inputFB">Facebook</label>
+                                <input 
+                                    type="url" 
+                                    class="form-control" 
+                                    id="inputFB"
+                                    placeholder="facebook.com/ex" 
+                                    name="facebook">
+                            </div>
+                            <div class="form-group col-4">
+                                <label for="inputYouTube">YouTube</label>
+                                <input 
+                                    type="url" 
+                                    class="form-control" 
+                                    id="inputYouTube" 
+                                    placeholder="YouTube.com/ex"
+                                    name="youtube">
+                            </div>
+                        </div>  
+                        <div  class="col-3">
+                            <div class="form-group col-2">
+                                <label for="inputInstagram">Instagram</label>
+                                <input 
+                                    type="url" 
+                                    class="form-control" 
+                                    id="inputInstagram"
+                                    placeholder="instagram.com/ex" 
+                                    name="instagram">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="inputTwitter">Twitter</label>
+                                <input 
+                                    type="url" 
+                                    class="form-control" 
+                                    id="inputTwitter" 
+                                    placeholder="twitter.com/ex"
+                                    name="twitter">
+                            </div>
+                            <div class="form-group col-2">
+                                <label for="inputWhatsApp">WhatsApp</label>
+                                <input 
+                                    type="tel" 
+                                    class="form-control" 
+                                    id="inputWhatsApp"
+                                    placeholder="(47) 99999-9999" 
+                                    name="whatsapp">
+                            </div>
+                        </div>
+                        <div class="form-col col-3">
+                            <label for="inputTags">TAGS</label>
+                            <textarea 
+                                type="text" 
+                                class="form-control" 
+                                id="inputTags" 
+                                placeholder="#casa, #escola, #café"
+                                name="tags"
+                                rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>    
+
+                <hr>
+                <button 
+                    type="submit" 
+                    class="btn btn-primary">Salvar
+                </button>
+                <hr>
+                <br>
+        </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<%- include('./partials/footer.ejs') %>

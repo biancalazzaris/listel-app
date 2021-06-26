@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+
+
+    <% empresas.forEach(empresas=> { %>
+        <div class="container "></div>
+        <div class="form-inline py-1 justify-content-center border">
+            <img src="/img/pessoa.png" alt="" style="width: 7%; border-radius: 50%; border: purple 2px solid;" >
+            <div class="col-2">
+                <h5><%= empresas.razaoSocial %></h5>
+                <p><i class="fas fa-phone"></i>  <%= empresas.telefone %></p>
+                <p><i class="fab fa-whatsapp"></i>  <%= empresas.whatsapp %></p>
+                <p id="tag"><%= empresas.tags %></p>
+            </div>
+            <div class="col-2 fa-ul">
+                <h5>Mídias</h5>
+                <p><i class="fab fa-instagram"></i> <%= empresas.instagram %></p>
+                <p><i class="fab fa-facebook"></i> <%= empresas.facebook %></p>
+                <p><i class="fab fa-twitter"></i> <%= empresas.twitter %></p>
+                <p><i class="fab fa-youtube"></i> <%= empresas.youtube %></p>
+            </div>
+            <div class="col-2">
+                <h5>Endereço</h5>
+                <p><%= empresas.rua %>, <%= empresas.numero %></p>
+                <p><%= empresas.bairro %></p>
+                <p><%= empresas.cidade %> - <%= empresas.estado %></p>
+                <p><%= empresas.cep %></p>
+            </div>
+            <div class=" text-right p-3">
+                <a href="/visualizar/<%= empresas.id %>" class="btn btn-success">Visualizar</a>
+            </div>
+        </div>
+</div>
+    <% }); %>
+
+
+<%- include('./partials/footer.ejs') %>
